@@ -17,6 +17,8 @@ package
 	import tavarat.pyykki12;
 	import tavarat.pyykki13;
 	import tavarat.pyykki14;
+	import tavarat.pyykki15;
+	
 	
 	public class pyykkays extends Sprite
 	{
@@ -137,6 +139,17 @@ package
 				PyykkiLista.push(pyykki_14);
 				stage.addChild(pyykki_14);
 			}
+			
+			if(SatunnainenKokonaisluku == 15)
+			{
+				trace(SatunnainenKokonaisluku);
+				var pyykki_15:pyykki15 = new pyykki15(stage);
+				pyykki_15.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				PyykkiLista.push(pyykki_15);
+				stage.addChild(pyykki_15);
+			}
+
 		}
 		
 		//suoritetaan kun pyykki poistuu stagelta
