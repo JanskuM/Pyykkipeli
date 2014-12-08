@@ -4,14 +4,14 @@ package tavarat
 	import flash.display.Stage;
 	import flash.events.Event;
 	
-	public class pyykki17 extends MovieClip
+	public class pyykki18 extends MovieClip
 	{
 		private var stageRef:Stage;
 		private var vy:Number = 3; //y nopeus
 		private var ay:Number = .4; //y kiihtyvyys
 		
 		
-		public function pyykki17(stageRef:Stage):void
+		public function pyykki18(stageRef:Stage):void
 		{
 			this.stageRef = stageRef;
 			

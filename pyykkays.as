@@ -18,6 +18,8 @@ package
 	import tavarat.pyykki13;
 	import tavarat.pyykki14;
 	import tavarat.pyykki15;
+	import tavarat.pyykki16;
+	import tavarat.pyykki17;
 	
 	
 	public class pyykkays extends Sprite
@@ -148,6 +150,26 @@ package
 				
 				PyykkiLista.push(pyykki_15);
 				stage.addChild(pyykki_15);
+			}
+			
+			if(SatunnainenKokonaisluku == 16)
+			{
+				trace(SatunnainenKokonaisluku);
+				var pyykki_16:pyykki16 = new pyykki16(stage);
+				pyykki_16.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				PyykkiLista.push(pyykki_16);
+				stage.addChild(pyykki_16);
+			}
+			
+			if(SatunnainenKokonaisluku == 17)
+			{
+				trace(SatunnainenKokonaisluku);
+				var pyykki_17:pyykki17 = new pyykki17(stage);
+				pyykki_17.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				PyykkiLista.push(pyykki_17);
+				stage.addChild(pyykki_17);
 			}
 
 		}
