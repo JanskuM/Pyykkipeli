@@ -1,18 +1,17 @@
 package tavarat
 {
-	import flash.display.MovieClip
+	import flash.display.MovieClip;
 	import flash.display.Stage;
 	import flash.events.Event;
 	
-	public class pyykki10 extends MovieClip
+	public class pyykki13 extends MovieClip
 	{
-		
 		private var stageRef:Stage;
-		private var vy:Number = 6; //y nopeus
-		private var ay:Number = .7; //y kiihtyvyys
+		private var vy:Number = 3; //y nopeus
+		private var ay:Number = .4; //y kiihtyvyys
 		
 		
-		public function pyykki10(stageRef:Stage) : void
+		public function pyykki13()
 		{
 			this.stageRef = stageRef;
 			
@@ -41,8 +40,7 @@ package tavarat
 			removeEventListener(Event.ENTER_FRAME, loop);
 			
 			if (stageRef.contains(this))
-				stageRef.removeChild(this);
+				stageRef.removeChild(this);	
 		}
-		
 	}
 }

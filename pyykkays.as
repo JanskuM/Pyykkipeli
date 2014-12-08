@@ -13,6 +13,8 @@ package
 	
 	import tavarat.pyykki1;
 	import tavarat.pyykki10;
+	import tavarat.pyykki11;
+	import tavarat.pyykki12;
 	
 	public class pyykkays extends Sprite
 	{
@@ -66,7 +68,7 @@ package
 			var SatunnainenKokonaisluku:Number = Math.floor(Math.random() * 90)
 			
 			//Jos SatunnainenKokonaisluku == 5, luodaan pyykki1 joka lähtee kiihtymällä putoamaan pyykki1.as luokan mukaisesti
-			if (SatunnainenKokonaisluku == 5)
+			if (SatunnainenKokonaisluku == 1)
 			{
 				trace(SatunnainenKokonaisluku);
 				//luo pyykki1
@@ -81,7 +83,7 @@ package
 			}
 			
 			//Jos SatunnainenKokonaisluku == 3, luodaan pyykki10 joka lähtee kiihtymällä putoamaan pyykki10.as luokan mukaisesti
-			if (SatunnainenKokonaisluku == 3)
+			if (SatunnainenKokonaisluku == 10)
 			{
 				trace(SatunnainenKokonaisluku);
 				//luo pyykki10
@@ -95,6 +97,28 @@ package
 				stage.addChild(pyykki_10);
 			}
 			
+			if(SatunnainenKokonaisluku == 11)
+			{
+				trace(SatunnainenKokonaisluku);
+				var pyykki_11:pyykki11 = new pyykki11(stage);
+				pyykki_11.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				PyykkiLista.push(pyykki_11);
+				stage.addChild(pyykki_11);
+			}
+			if (SatunnainenKokonaisluku == 10)
+			{
+				trace(SatunnainenKokonaisluku);
+				//luo pyykki10
+				var pyykki_12:pyykki12 = new pyykki12(stage);
+				
+				//luo kuuntelija pyykin poistumiselle stagelta
+				pyykki_12.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				//lisää pyykki PyykkiListaan ja stagelle
+				PyykkiLista.push(pyykki_12);
+				stage.addChild(pyykki_12);
+			}
 		}
 		
 		//suoritetaan kun pyykki poistuu stagelta

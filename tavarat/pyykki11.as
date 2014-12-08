@@ -4,15 +4,14 @@ package tavarat
 	import flash.display.Stage;
 	import flash.events.Event;
 	
-	public class pyykki10 extends MovieClip
+	public class pyykki11 extends MovieClip
 	{
-		
 		private var stageRef:Stage;
-		private var vy:Number = 6; //y nopeus
-		private var ay:Number = .7; //y kiihtyvyys
-		
-		
-		public function pyykki10(stageRef:Stage) : void
+		private var vy:Number = 3; //y nopeus
+		private var ay:Number = .4; //y kiihtyvyys
+			
+			
+		public function pyykki11(stageRef:Stage) : void
 		{
 			this.stageRef = stageRef;
 			
@@ -22,7 +21,7 @@ package tavarat
 			//lisätään ENTER_FRAME kuuntelija, joka kutsuu loop-metodia jokaisella framella
 			addEventListener(Event.ENTER_FRAME, loop, false, 0, true);
 		}
-		
+			
 		private function loop(e:Event) : void
 		{
 			//tämä loop metodi ajetaan pelissä jokaisella framella eli 24 krt/sekunnissa
@@ -37,12 +36,11 @@ package tavarat
 		}
 		
 		private function removeSelf() : void {
-			
+				
 			removeEventListener(Event.ENTER_FRAME, loop);
-			
+				
 			if (stageRef.contains(this))
 				stageRef.removeChild(this);
 		}
-		
 	}
 }
