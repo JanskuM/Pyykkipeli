@@ -15,6 +15,8 @@ package
 	import tavarat.pyykki10;
 	import tavarat.pyykki11;
 	import tavarat.pyykki12;
+	import tavarat.pyykki13;
+	import tavarat.pyykki14;
 	
 	public class pyykkays extends Sprite
 	{
@@ -106,18 +108,34 @@ package
 				PyykkiLista.push(pyykki_11);
 				stage.addChild(pyykki_11);
 			}
-			if (SatunnainenKokonaisluku == 10)
+			if(SatunnainenKokonaisluku == 12)
 			{
 				trace(SatunnainenKokonaisluku);
-				//luo pyykki10
 				var pyykki_12:pyykki12 = new pyykki12(stage);
-				
-				//luo kuuntelija pyykin poistumiselle stagelta
 				pyykki_12.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
 				
-				//lisää pyykki PyykkiListaan ja stagelle
 				PyykkiLista.push(pyykki_12);
 				stage.addChild(pyykki_12);
+			}
+			
+			if(SatunnainenKokonaisluku == 13)
+			{
+				trace(SatunnainenKokonaisluku);
+				var pyykki_13:pyykki13 = new pyykki13(stage);
+				pyykki_13.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				PyykkiLista.push(pyykki_13);
+				stage.addChild(pyykki_13);
+			}
+			
+			if(SatunnainenKokonaisluku == 14)
+			{
+				trace(SatunnainenKokonaisluku);
+				var pyykki_14:pyykki14 = new pyykki14(stage);
+				pyykki_14.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				PyykkiLista.push(pyykki_14);
+				stage.addChild(pyykki_14);
 			}
 		}
 		

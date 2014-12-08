@@ -11,7 +11,7 @@ package tavarat
 		private var ay:Number = .4; //y kiihtyvyys
 		
 		
-		public function pyykki12()
+		public function pyykki12(stageRef:Stage):void
 		{
 			this.stageRef = stageRef;
 			
