@@ -1,14 +1,18 @@
 package  {
 	
 	import flash.display.MovieClip;
+<<<<<<< HEAD
 	import pyykkikorik;
 	import pyykkays;
 	import flash.display.Stage;
 	import flash.events.Event;
+=======
+>>>>>>> origin/master
 	
 	
 	public class pyykkikorik extends MovieClip {
 		
+<<<<<<< HEAD
 		public function pyykkikorik() {
 			
 			//lisätään ENTER_FRAME kuuntelija, joka kutsuu loop-metodia jokaisella framella
@@ -30,6 +34,12 @@ package  {
 			}
 		}
 		
+=======
+		
+		public function pyykkikorik() {
+			// constructor code
+		}
+>>>>>>> origin/master
 	}
 	
 }

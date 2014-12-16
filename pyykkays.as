@@ -12,7 +12,11 @@ package
 	import flash.utils.*;
 	
 	import tavarat.pyykki1;
+<<<<<<< HEAD
 	/*import tavarat.pyykki10;
+=======
+	import tavarat.pyykki10;
+>>>>>>> origin/master
 	import tavarat.pyykki11;
 	import tavarat.pyykki12;
 	import tavarat.pyykki13;
@@ -40,18 +44,29 @@ package
 	import tavarat.pyykki6;
 	import tavarat.pyykki7;
 	import tavarat.pyykki8;
+<<<<<<< HEAD
 	import tavarat.pyykki9;*/
+=======
+	import tavarat.pyykki9;
+>>>>>>> origin/master
 	
 	
 	public class pyykkays extends Sprite
 	{
 		public var luoPyykitID:uint;
 		public var gameSpeed:uint;
+<<<<<<< HEAD
 		
 		
 		//luodaan Array eli taulukko jonka avulla pidetään kirjaa peliin lisättävistä pyykeistä
 		public static var PyykkiLista:Array = new Array();
 		private var kirjo:pyykkikorik = new pyykkikorik();
+=======
+		public var kirjo:pyykkikorik = new pyykkikorik();
+		
+		//luodaan Array eli taulukko jonka avulla pidetään kirjaa peliin lisättävistä pyykeistä
+		private var PyykkiLista:Array = new Array();
+>>>>>>> origin/master
 		
 		public function pyykkays()
 		{
@@ -93,7 +108,11 @@ package
 		
 		{
 			//Luodaan satunnainen kokonaisluku.
+<<<<<<< HEAD
 			var SatunnainenKokonaisluku:Number = Math.floor(Math.random()* 90) //* 300)
+=======
+			var SatunnainenKokonaisluku:Number = Math.floor(Math.random() * 90)
+>>>>>>> origin/master
 			
 			//Jos SatunnainenKokonaisluku == 5, luodaan pyykki1 joka lähtee kiihtymällä putoamaan pyykki1.as luokan mukaisesti
 			if (SatunnainenKokonaisluku == 1)
@@ -110,6 +129,7 @@ package
 				stage.addChild(pyykki_1);
 			}
 			
+<<<<<<< HEAD
 			/*			if(SatunnainenKokonaisluku == 10)
 			{
 			trace(SatunnainenKokonaisluku);
@@ -404,6 +424,141 @@ package
 			PyykkiLista.push(pyykki_30);
 			stage.addChild(pyykki_30);
 			}*/
+=======
+			if(SatunnainenKokonaisluku == 2)
+			{
+				trace(SatunnainenKokonaisluku);
+				var pyykki_2:pyykki2 = new pyykki2(stage);
+				pyykki_2.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				PyykkiLista.push(pyykki_2);
+				stage.addChild(pyykki_2);
+			}
+			
+			//Jos SatunnainenKokonaisluku == 3, luodaan pyykki3 joka lähtee kiihtymällä putoamaan pyykki3.as luokan mukaisesti
+			if(SatunnainenKokonaisluku == 3)
+			{
+				trace(SatunnainenKokonaisluku);
+				var pyykki_3:pyykki3 = new pyykki3(stage);
+				pyykki_3.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				PyykkiLista.push(pyykki_3);
+				stage.addChild(pyykki_3);
+			}
+			
+			if(SatunnainenKokonaisluku == 4)
+			{
+				trace(SatunnainenKokonaisluku);
+				var pyykki_4:pyykki4 = new pyykki4(stage);
+				pyykki_4.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				PyykkiLista.push(pyykki_4);
+				stage.addChild(pyykki_4);
+			}
+			
+			if(SatunnainenKokonaisluku == 5)
+			{
+				trace(SatunnainenKokonaisluku);
+				var pyykki_5:pyykki5 = new pyykki5(stage);
+				pyykki_5.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				PyykkiLista.push(pyykki_5);
+				stage.addChild(pyykki_5);
+			}
+			
+			if(SatunnainenKokonaisluku == 6)
+			{
+				trace(SatunnainenKokonaisluku);
+				var pyykki_6:pyykki6 = new pyykki6(stage);
+				pyykki_6.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				PyykkiLista.push(pyykki_6);
+				stage.addChild(pyykki_6);
+			}
+			
+			if (SatunnainenKokonaisluku == 10)
+			{
+				trace(SatunnainenKokonaisluku);
+				//luo pyykki10
+				var pyykki_10:pyykki10 = new pyykki10(stage);
+				
+				//luo kuuntelija pyykin poistumiselle stagelta
+				pyykki_10.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				//lisää pyykki PyykkiListaan ja stagelle
+				PyykkiLista.push(pyykki_10);
+				stage.addChild(pyykki_10);
+			}
+			
+			if(SatunnainenKokonaisluku == 11)
+			{
+				trace(SatunnainenKokonaisluku);
+				var pyykki_11:pyykki11 = new pyykki11(stage);
+				pyykki_11.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				PyykkiLista.push(pyykki_11);
+				stage.addChild(pyykki_11);
+			}
+			if(SatunnainenKokonaisluku == 12)
+			{
+				trace(SatunnainenKokonaisluku);
+				var pyykki_12:pyykki12 = new pyykki12(stage);
+				pyykki_12.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				PyykkiLista.push(pyykki_12);
+				stage.addChild(pyykki_12);
+			}
+			
+			if(SatunnainenKokonaisluku == 13)
+			{
+				trace(SatunnainenKokonaisluku);
+				var pyykki_13:pyykki13 = new pyykki13(stage);
+				pyykki_13.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				PyykkiLista.push(pyykki_13);
+				stage.addChild(pyykki_13);
+			}
+			
+			if(SatunnainenKokonaisluku == 14)
+			{
+				trace(SatunnainenKokonaisluku);
+				var pyykki_14:pyykki14 = new pyykki14(stage);
+				pyykki_14.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				PyykkiLista.push(pyykki_14);
+				stage.addChild(pyykki_14);
+			}
+			
+			if(SatunnainenKokonaisluku == 15)
+			{
+				trace(SatunnainenKokonaisluku);
+				var pyykki_15:pyykki15 = new pyykki15(stage);
+				pyykki_15.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				PyykkiLista.push(pyykki_15);
+				stage.addChild(pyykki_15);
+			}
+			
+			if(SatunnainenKokonaisluku == 16)
+			{
+				trace(SatunnainenKokonaisluku);
+				var pyykki_16:pyykki16 = new pyykki16(stage);
+				pyykki_16.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				PyykkiLista.push(pyykki_16);
+				stage.addChild(pyykki_16);
+			}
+			
+			if(SatunnainenKokonaisluku == 17)
+			{
+				trace(SatunnainenKokonaisluku);
+				var pyykki_17:pyykki17 = new pyykki17(stage);
+				pyykki_17.addEventListener(Event.REMOVED_FROM_STAGE, poistaPyykit, false, 0, true);
+				
+				PyykkiLista.push(pyykki_17);
+				stage.addChild(pyykki_17);
+			}
+>>>>>>> origin/master
 
 		}
 		
