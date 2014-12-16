@@ -3,20 +3,21 @@ package tavarat
 	import flash.display.MovieClip;
 	import flash.display.Stage;
 	import flash.events.Event;
-		
+	import pyykkikorik;
+	
 	public class pyykki1 extends MovieClip
 	{
+		
 		private var stageRef:Stage;
 		private var target:pyykkikorik = new pyykkikorik();
 		private var vy:Number = 3; //y nopeus
-		private var ay:Number = .2; //y kiihtyvyys
+		private var ay:Number = .4; //y kiihtyvyys
 		
 		
 		public function pyykki1(stageRef:Stage) : void
 		{
 			this.stageRef = stageRef;
-			this.target = target;
-			
+		
 			x = Math.random() * stageRef.stageWidth/2 + 120;
 			y = -5;
 			
@@ -36,22 +37,22 @@ package tavarat
 			if (y > stageRef.stageHeight)
 				removeSelf();
 			
-			if (hitTestObject(target.hit))
+			/*if (hitTestObject(target))
 			{
 				trace("hitME");
 				removeSelf();
-			}
+			}*/
 		}
 		
-		private function removeSelf() : void 
-		{	
+		private function removeSelf() : void {
+			
 			removeEventListener(Event.ENTER_FRAME, loop);
 			
 			if (stageRef.contains(this))
 				stageRef.removeChild(this);
 		}
 		
-		public function takeHit():void
+		public function takeHit() : void
 		{
 			removeSelf();
 		}

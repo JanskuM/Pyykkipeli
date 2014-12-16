@@ -8,14 +8,14 @@ package tavarat
 	{
 		private var stageRef:Stage;
 		private var vy:Number = 3; //y nopeus
-		private var ay:Number = .2; //y kiihtyvyys
+		private var ay:Number = .4; //y kiihtyvyys
 			
 			
 		public function pyykki11(stageRef:Stage) : void
 		{
 			this.stageRef = stageRef;
 			
-			x = Math.random() * stageRef.stageWidth/2 + 120;
+			x = Math.random() * stageRef.stageWidth;
 			y = -5;
 			
 			//lisätään ENTER_FRAME kuuntelija, joka kutsuu loop-metodia jokaisella framella
