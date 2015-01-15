@@ -43,5 +43,10 @@ package tavarat
 			if (stageRef.contains(this))
 				stageRef.removeChild(this);
 		}
+		
+		private function hitTest():Boolean
+		{
+			return false;
+		}
 	}
 }

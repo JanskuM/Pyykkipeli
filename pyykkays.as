@@ -12,11 +12,7 @@ package
 	import flash.utils.*;
 	
 	import tavarat.pyykki1;
-
-	/*
-
-	import tavarat.pyykki10;
-
+	/*import tavarat.pyykki10;
 	import tavarat.pyykki11;
 	import tavarat.pyykki12;
 	import tavarat.pyykki13;
@@ -45,16 +41,12 @@ package
 	import tavarat.pyykki7;
 	import tavarat.pyykki8;
 	import tavarat.pyykki9;*/
-
-
-
 	
 	
 	public class pyykkays extends Sprite
 	{
 		public var luoPyykitID:uint;
 		public var gameSpeed:uint;
-
 		
 		
 		//luodaan Array eli taulukko jonka avulla pidetään kirjaa peliin lisättävistä pyykeistä
@@ -63,7 +55,7 @@ package
 		
 		public function pyykkays()
 		{
-			kirjo.mouseEnabled=false;
+			kirjo.mouseEnabled = false;
 			gameSpeed = 500;
 			Mouse.hide();
 			this.addEventListener(MouseEvent.ROLL_OUT,outKirjo);
@@ -102,7 +94,6 @@ package
 		{
 			//Luodaan satunnainen kokonaisluku.
 			var SatunnainenKokonaisluku:Number = Math.floor(Math.random()* 90) //* 300)
-
 			
 			//Jos SatunnainenKokonaisluku == 5, luodaan pyykki1 joka lähtee kiihtymällä putoamaan pyykki1.as luokan mukaisesti
 			if (SatunnainenKokonaisluku == 1)
