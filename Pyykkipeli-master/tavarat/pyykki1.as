@@ -5,7 +5,6 @@ package tavarat
 	import flash.events.Event;
 	
 	import pyykkikorik;
-	
 	import tavarat.hitBox;
 	
 	public class pyykki1 extends MovieClip
@@ -37,20 +36,17 @@ package tavarat
 			y += vy;
 			
 			//pyykki poistaa itsensä ja ENTER_FRAME kuuntelijan poistuessaan stagelta
-			if (y > stageRef.stageHeight)
+			if (y > stageRef.stageHeight-20)
 				removeSelf();
-			}
+			
+		}
 		
 		private function removeSelf() : void 
-		{
-			
+		{	
 			removeEventListener(Event.ENTER_FRAME, loop);
 			
 			if (stageRef.contains(this))
 				stageRef.removeChild(this);
 		}
-		
 	}
-		
 }
-	
